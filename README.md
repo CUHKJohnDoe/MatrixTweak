@@ -142,3 +142,7 @@ You can find:
 Pause to view or copy the steps and result, then type any key to kill the program.
 
 ## May You Never Fail MATH1030!!!
+
+I'll keep updating the repo with any potentially useful matrix hacks to play with! Matrix-inverse, Idempotence and Nilpotence checker coming soon!!
+
+~~This doubles as a C++ practice for me in the meantime.~~
