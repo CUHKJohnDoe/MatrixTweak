@@ -347,12 +347,6 @@ void make(){
     _printMat_();
 }
 
-void test(){
-    frac m,n,o;
-    o.init(52,12);
-    _printMeta_(o);
-}
-
 
 int main(){
     cin>>_row_>>_col_;
