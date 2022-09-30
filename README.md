@@ -1,6 +1,10 @@
 # MatrixTweak
 
-A Step-by-step Showcase of Matrix Row Reduction to Reduced Row Echelon Forms.
+Here you can find:
+
++ A Step-by-step Showcase of Matrix Row Reduction to Reduced Row Echelon Forms... and
+
++ ... a detailed demonstration of Matrix Multiplication.
 
 Apparently, a lot of online tools that do matrix row-reduction either only produce echelon forms, or only show the answer without procedures. So this might be something you may want to use when ~~It's about to be deadline of MATH1030 homework~~ you need to practice row-reduction and check your answers step-by-step.
 
