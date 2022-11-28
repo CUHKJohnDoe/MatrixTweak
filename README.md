@@ -12,7 +12,7 @@ The same problem occurs when students attempt to do matrix multiplication using 
 
 ## Updates
 
-There's also a program for *matrix multiplication* now!
+Calculation of Determinants now available.
 
 ## Row Reduction
 
@@ -250,8 +250,82 @@ You can find:
 
 ~~I know the algebra is a little bit hard to read, yet I'm too lazy to format that thing up the fact that no one pays for my work... so whatever.~~
 
-## May You Never Fail MATH1030!!!
+## Calculating Determinant
 
-I'll keep updating the repo with any potentially useful matrix hacks to play with! Matrix-inverse, Idempotence and Nilpotence checker coming soon!!
+A step-by-step (again) showcase of calculating determinant of a matrix.
+
+### How to Use
+
+Download and put `det.exe` and `det.bat` under the same directory.
+
+Start `det.bat` and follow the instructions.
+
+### Modes of Calculations
+
+The program currently implements two modes of calculation. 
+
+The first mode is `by definition`, which recursively expands the determinant always about its first row; the second mode is `optimized`, which would attempt to expands the determinant about its row or column with *the least non-zero entries* to simplify calculations. Both modes have an average-case time complexity of $O(k^n)$ for an $n \times n$ matrix.
+
+As some students may know, determinant of a matrix can be evaluated by performing the gaussian elimination, which has better time complexity of only $O(n^3)$ for an $n \times n$ matrix. However, as gaussian elimination is already covered in other parts, this method is not included in the determinant tool.
+
+This tool is meant for smaller matrices, and implements only a naive algorithm as more a *step-wise showcase of how things are done* than an optimization; otherwise the program would take very long to run, or the outputs would be too messy to read.
+
+### Example of Evaluating a Determinant
+
+$$ det \begin{bmatrix}
+3&-12&21\\
+-5&19&-34\\
+1&-3&7\\
+\end{bmatrix} = -3 $$
+
+```
+Input the size of the matrix.
+>>> 3
+Input the entries of the matrix. 
+--------------------
+3 -12 21
+-5 19 -34
+1 -3 7
+--------------------
+Select the mode of computation - 0 for by definition, 1 for optimized:
+Mode(#)>>> 0
+| 3 -12 21  |
+| -5 19 -34  |
+| 1 -3 7  |
+Iterating from row 0.Sub-matrix with size 2 removing row 0 and column 0 is:
+| 19 -34  |
+| -3 7  |
+Iterating from row 0.Sub-matrix with size 1 removing row 0 and column 0 is:
+| 7  |
+It has a size of 1, and thus its determinant is 7
+Sub-matrix with size 1 removing row 0 and column 1 is:
+| -3  |
+It has a size of 1, and thus its determinant is -3
+It has the size of 2, and a determinant of 31.
+Sub-matrix with size 2 removing row 0 and column 1 is:
+| -5 -34  |
+| 1 7  |
+Iterating from row 0.Sub-matrix with size 1 removing row 0 and column 0 is:
+| 7  |
+It has a size of 1, and thus its determinant is 7
+Sub-matrix with size 1 removing row 0 and column 1 is:
+| 1  |
+It has a size of 1, and thus its determinant is 1
+It has the size of 2, and a determinant of -1.
+Sub-matrix with size 2 removing row 0 and column 2 is:
+| -5 19  |
+| 1 -3  |
+Iterating from row 0.Sub-matrix with size 1 removing row 0 and column 0 is:
+| -3  |
+It has a size of 1, and thus its determinant is -3
+Sub-matrix with size 1 removing row 0 and column 1 is:
+| 1  |
+It has a size of 1, and thus its determinant is 1
+It has the size of 2, and a determinant of -4.
+It has the size of 3, and a determinant of -3.
+The determinant of the matrix is: -3
+```
+
+## May You Never Fail MATH1030!!!
 
 ~~This doubles as a C++ practice for me in the meantime.~~
