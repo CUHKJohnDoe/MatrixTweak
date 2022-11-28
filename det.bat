@@ -1,0 +1,2 @@
+det.exe
+pause
